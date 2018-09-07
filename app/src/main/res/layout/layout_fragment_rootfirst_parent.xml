@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="390dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/cirsquare_redpad">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerview_GameSettingThumbnails"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <Button
+            android:id="@+id/button_addGame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:text="+" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/cirsquare_redpad">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerview_NationNameThumbnails"
+            android:layout_width="150dp"
+            android:layout_height="match_parent" />
+
+        <Button
+            android:id="@+id/button_addNationName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="添加国家"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            />
+    </RelativeLayout>
+
+
+</FrameLayout>

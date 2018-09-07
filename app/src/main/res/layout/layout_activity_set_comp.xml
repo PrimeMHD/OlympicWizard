@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="300dp"
+    android:layout_height="330dp"
+    tools:context=".Activity.SetCompActivity">
+
+    <TextView
+        android:id="@+id/textView_setCompTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="@string/setCompTitle" />
+
+    <TextView
+        android:id="@+id/textView_first_title"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/textView_setCompTitle"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="25dp"
+        android:text="@string/FirstPrize" />
+
+    <TextView
+        android:id="@+id/textView_second_title"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_alignStart="@id/textView_first_title"
+        android:layout_below="@id/textView_first_title"
+        android:layout_marginTop="@dimen/settingItemMargin"
+        android:text="@string/SecondPrize" />
+
+    <TextView
+        android:id="@+id/textView_third_title"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_alignStart="@id/textView_first_title"
+        android:layout_below="@id/textView_second_title"
+        android:layout_marginTop="@dimen/settingItemMargin"
+        android:text="@string/ThirdPrize" />
+
+    <TextView
+        android:id="@+id/textView_fourth_title"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_alignStart="@id/textView_first_title"
+        android:layout_below="@id/textView_third_title"
+        android:layout_marginTop="@dimen/settingItemMargin"
+        android:text="@string/FourthPrize" />
+
+    <TextView
+        android:id="@+id/textView_fifth_title"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_alignStart="@id/textView_first_title"
+        android:layout_below="@id/textView_fourth_title"
+        android:layout_marginTop="@dimen/settingItemMargin"
+        android:text="@string/FifthPrize" />
+
+    <Spinner
+        android:id="@+id/spinner_select_firstNation"
+        android:layout_width="100dp"
+        android:layout_height="25dp"
+        android:layout_alignTop="@+id/textView_first_title"
+        android:layout_marginStart="20dp"
+        android:layout_toEndOf="@id/textView_first_title" />
+
+    <Spinner
+        android:id="@+id/spinner_select_secondNation"
+        android:layout_width="100dp"
+        android:layout_height="25dp"
+        android:layout_alignStart="@id/spinner_select_firstNation"
+        android:layout_below="@id/spinner_select_firstNation"
+        android:layout_marginTop="@dimen/settingItemMargin" />
+
+    <Spinner
+        android:id="@+id/spinner_select_thirdNation"
+        android:layout_width="100dp"
+        android:layout_height="25dp"
+        android:layout_alignStart="@id/spinner_select_firstNation"
+        android:layout_below="@id/spinner_select_secondNation"
+        android:layout_marginTop="@dimen/settingItemMargin" />
+
+    <Spinner
+        android:id="@+id/spinner_select_fourthNation"
+        android:layout_width="100dp"
+        android:layout_height="25dp"
+        android:layout_alignStart="@id/spinner_select_firstNation"
+        android:layout_below="@id/spinner_select_thirdNation"
+        android:layout_marginTop="@dimen/settingItemMargin" />
+
+    <Spinner
+        android:id="@+id/spinner_select_fifthNation"
+        android:layout_width="100dp"
+        android:layout_height="25dp"
+        android:layout_alignStart="@id/spinner_select_firstNation"
+        android:layout_below="@id/spinner_select_fourthNation"
+        android:layout_marginTop="@dimen/settingItemMargin" />
+    <Button
+        android:id="@+id/button_confirm_setComp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/confirm"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@id/button_cancel_setComp"
+        android:layout_marginBottom="15dp"
+        />
+    <Button
+        android:id="@+id/button_cancel_setComp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cancel"
+        android:layout_alignBaseline="@id/button_confirm_setComp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="50dp"
+        />
+
+
+</RelativeLayout>

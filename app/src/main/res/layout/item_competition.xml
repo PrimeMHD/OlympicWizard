@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/cirsquare_redpad"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:layout_margin="10dp">
+    <TextView
+        android:id="@+id/textView_compName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/GameName"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="10dp"
+        />
+    <TextView
+        android:id="@+id/textView_compState"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/cirsquare"
+        android:text="@string/compState"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp"
+        />
+
+
+
+</RelativeLayout>

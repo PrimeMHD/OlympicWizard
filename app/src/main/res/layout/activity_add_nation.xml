@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="200dp"
+    tools:context=".Activity.AddNationActivity">
+
+
+    <TextView
+        android:id="@+id/textView_tag_addnation_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/AddNewNation"
+        />
+    <TextView
+        android:id="@+id/textView_tag_nationname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/NationName"
+        android:layout_below="@id/textView_tag_addnation_title"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="10dp"
+        />
+
+    <EditText
+        android:id="@+id/edit_nationname"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/textView_tag_nationname"
+        android:layout_alignBaseline="@id/textView_tag_nationname"
+        android:layout_marginStart="5dp"
+        />
+    <Button
+        android:id="@+id/button_cancel_addnation"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:text="@string/cancel"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginStart="50dp"
+
+        />
+
+
+
+
+
+    <Button
+        android:id="@+id/button_confirm_addnation"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:text="@string/confirm"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginStart="145dp"
+
+        />
+
+
+</RelativeLayout>
