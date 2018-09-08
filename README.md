@@ -1,2 +1,2 @@
-# ChizaiTongji
-“吃在同济”校园美食文化app
+# OlympicWizard
+管理、统计奥运会赛事的Android App。
