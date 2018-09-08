@@ -2,14 +2,119 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@color/colorGrayBackground">
+    android:background="@color/colorWhiteBackground"
+    android:orientation="vertical">
     <!-- TODO: Update blank fragment layout -->
-
-
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/recyclerview_articlethumbnail_1"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:background="@drawable/cirsquare_redpad">
+
+        <TextView
+            android:id="@+id/textView_RankBoard_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:text="国家代码       国名        总分      男团总分     女团总分"
+            android:textColor="@color/colorThemeRed"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerview_rankBoard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textView_RankBoard_title"
+            android:layout_marginBottom="100dp" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:background="@drawable/cirsquare_onlydown">
+
+            <TextView
+                android:id="@+id/textView_RankTypeSelectReminder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="23dp"
+                android:layout_marginTop="13dp"
+                android:text="@string/RankTypeSelectReminder"
+                android:textColor="@color/colorWhiteBackground"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/button_setRankSeqSTB"
+                android:layout_width="60dp"
+                android:layout_height="35dp"
+                android:layout_alignBaseline="@id/textView_RankTypeSelectReminder"
+                android:layout_marginEnd="30dp"
+                android:layout_toStartOf="@id/button_setRankSeqBTS"
+                android:background="@drawable/cirsquare_button"
+                android:text="@string/SequenceSTB" />
+
+            <Button
+                android:id="@+id/button_setRankSeqBTS"
+                android:layout_width="60dp"
+                android:layout_height="35dp"
+                android:layout_alignBaseline="@id/textView_RankTypeSelectReminder"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="30dp"
+                android:background="@drawable/cirsquare_button"
+                android:text="@string/SequenceBTS" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup_RankTypeSelector"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/RankTypeSelectorHeight"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="@color/colorThemeRed"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radioButton_RankByNationCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/RankTypeSelectorHeight"
+                    android:text="@string/NationCode"
+
+                    android:textColor="@color/colorWhiteBackground" />
+
+                <RadioButton
+                    android:id="@+id/radioButton_RankByTotalScore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/RankTypeSelectorHeight"
+                    android:text="@string/TotalScore"
+
+                    android:textColor="@color/colorWhiteBackground" />
+
+                <RadioButton
+                    android:id="@+id/radioButton_RankByMaleScore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/RankTypeSelectorHeight"
+                    android:text="@string/MaleScore"
+
+                    android:textColor="@color/colorWhiteBackground" />
+
+                <RadioButton
+                    android:id="@+id/radioButton_RankByFemaleScore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/RankTypeSelectorHeight"
+                    android:text="@string/FemaleScore"
+
+                    android:textColor="@color/colorWhiteBackground" />
+
+
+            </RadioGroup>
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
 
 </FrameLayout>

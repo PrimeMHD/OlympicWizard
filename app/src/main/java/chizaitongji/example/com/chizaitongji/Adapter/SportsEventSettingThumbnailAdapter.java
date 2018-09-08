@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 import java.util.ArrayList;
@@ -56,7 +57,7 @@ public class SportsEventSettingThumbnailAdapter extends RecyclerView.Adapter<Spo
     //holder.itemView是子项视图的实例，holder.textView是子项内控件的实例
     //position是点击位置
     @Override
-    public void onBindViewHolder(final SportsEventSettingThumbnailAdapter.MyViewHolder holder, int position) {
+    public void onBindViewHolder(final SportsEventSettingThumbnailAdapter.MyViewHolder holder, final int position) {
         //设置显示内容为list里的对应项
         SportsEventSettingThumbnail sportsEventSettingThumbnail = sportsEventSettingThumbnails.get(position);
         holder.textView_GameName.setText(sportsEventSettingThumbnail.getGameName());
@@ -74,7 +75,13 @@ public class SportsEventSettingThumbnailAdapter extends RecyclerView.Adapter<Spo
         holder.button_modify.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //唤起修改
+                if(mainActivity.getOlympicGame().getGames().get(position).hasOutcome()){
+                    Toast.makeText(mainActivity,"该场比赛已经结束！",Toast.LENGTH_LONG).show();
+
+                }else {
+                    Toast.makeText(mainActivity,"请发送邮件联系奥组委进行修改",Toast.LENGTH_LONG).show();
+
+                }
             }
         });
         holder.button_delete.setOnClickListener(new View.OnClickListener() {
@@ -86,7 +93,7 @@ public class SportsEventSettingThumbnailAdapter extends RecyclerView.Adapter<Spo
                 if(mainActivity!=null){
                     mainActivity.getOlympicGame().getGames().remove(removePos);
                 }else {
-                    Log.d(TAG,"mainActivity为空");
+
                 }
                 notifyItemRemoved(removePos);
             }
@@ -145,7 +152,7 @@ public class SportsEventSettingThumbnailAdapter extends RecyclerView.Adapter<Spo
 
 
     public void setMainActivity(MainActivity mainActivity) {
-        Log.d(TAG,"mainActivity不应该为空啊");
+
         this.mainActivity = mainActivity;
     }
 }

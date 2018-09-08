@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">吃在同济</string>
+    <string name="app_name">奥运精灵</string>
     <string name="project_packname">chizaitongji.example.com.chizaitongji</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -29,7 +29,11 @@
     <string name="Modify">修改</string>
     <string name="AddNewGame">添加新项目</string>
     <string name="AddNewNation">添加参赛国家</string>
+    <string name="InGameNation">参赛国家</string>
+    <string name="InGame">比赛项目</string>
+
     <string name="NationName">国名</string>
+    <string name="NationCode">国家代码</string>
     <string name="finish">完成</string>
     <string name="confirm">确认</string>
     <string name="cancel">取消</string>
@@ -40,5 +44,15 @@
     <string name="ThirdPrize">第三名</string>
     <string name="FourthPrize">第四名</string>
     <string name="FifthPrize">第五名</string>
-
+    <string name="RankBoard">排行榜</string>
+    <string name="Search">查询</string>
+    <string name="TotalScore">总分</string>
+    <string name="MaleScore">男队得分</string>
+<string name="FemaleScore">女队得分</string>
+    <string name="RankTypeSelectReminder">请选择排序类型</string>
+    <string name="SequenceSTB">升序</string>
+    <string name="SequenceBTS">降序</string>
+    <string name="OlympicNewsURL">https://xw.qq.com/m/2016/?f=c_2016</string>
+    <string name="OlympicVideosURL">http://2016.cctv.com/m/index.shtml</string>
+    <string name="OlympicPicturesURL">https://photo.sina.cn/channel_76.htm?vt=4&amp;from=wap</string>
 </resources>

@@ -1,6 +1,8 @@
 package chizaitongji.example.com.chizaitongji.Adapter;
 
+import android.content.Context;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,6 +23,8 @@ public class CompetitionAdapter extends RecyclerView.Adapter<CompetitionAdapter.
 
     private List<CompetitionThumb> competitionThumbList;
     private OnItemClickListener mClickListener;
+    private Context mContext;
+    private static final String TAG="CompetitionAdapter";
 
 
     public CompetitionAdapter(List<CompetitionThumb> competitionThumbList) {
@@ -63,6 +67,7 @@ public class CompetitionAdapter extends RecyclerView.Adapter<CompetitionAdapter.
 
         if(competitionThumb.hasOutcome()){
             holder.textView_compState.setText("比赛结束");
+            holder.textView_compState.setBackground(mContext.getResources().getDrawable(R.drawable.cirsquare_status_ok));
         }
         else {
             holder.textView_compState.setText("待比赛");
@@ -129,7 +134,10 @@ public class CompetitionAdapter extends RecyclerView.Adapter<CompetitionAdapter.
     }
 
 
-
+    public void setmContext(Context mContext) {
+        this.mContext = mContext;
+        Log.d(TAG,"设置了mContext"+mContext);
+    }
 }
 
 

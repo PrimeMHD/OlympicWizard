@@ -6,7 +6,6 @@ import android.support.v4.app.FragmentPagerAdapter;
 
 import chizaitongji.example.com.chizaitongji.Fragment.Fragment_SecondGroup.Fragment_RootSecond_PagerFirst;
 import chizaitongji.example.com.chizaitongji.Fragment.Fragment_SecondGroup.Fragment_RootSecond_PagerSecond;
-import chizaitongji.example.com.chizaitongji.Fragment.Fragment_SecondGroup.Fragment_RootSecond_PagerThird;
 
 public class ArticlePagerFragmentAdapter extends FragmentPagerAdapter {
     private String[] mTitles;
@@ -25,8 +24,6 @@ public class ArticlePagerFragmentAdapter extends FragmentPagerAdapter {
             return Fragment_RootSecond_PagerFirst.newInstance();
         } else if (position == SECOND) {
             return Fragment_RootSecond_PagerSecond.newInstance();
-        } else if (position == THIRD) {
-            return Fragment_RootSecond_PagerThird.newInstance();
         } else {
             return null;
         }

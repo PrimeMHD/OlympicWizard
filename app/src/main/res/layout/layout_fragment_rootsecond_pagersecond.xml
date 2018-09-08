@@ -2,14 +2,213 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@color/colorGrayBackground">
+    android:background="@color/colorWhiteBackground"
+    android:orientation="vertical">
     <!-- TODO: Update blank fragment layout -->
 
-
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/recyclerview_articlethumbnail_2"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout_searchArea1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/cirsquare_redpad">
+
+            <TableLayout
+                android:id="@+id/tableLayout_searchInputArea1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id/textView_NationNameToSearch_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/NationName"
+                        android:textColor="@color/colorThemeRed"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textView_GameNameToSearch_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/GameName"
+                        android:textColor="@color/colorThemeRed"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textView_GameGenderToSearch_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/GameGender"
+                        android:textColor="@color/colorThemeRed"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow>
+
+                    <EditText
+                        android:id="@+id/editText_NationNameToSearch"
+                        android:layout_width="100dp"
+                        android:layout_height="40dp"
+                        android:layout_margin="4dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/cirsquare_inputpad"
+                        android:gravity="center"
+                        android:textColor="@color/colorWhiteBackground"
+                        />
+
+                    <EditText
+                        android:id="@+id/editText_GameNameToSearch"
+                        android:layout_width="100dp"
+                        android:layout_height="40dp"
+                        android:layout_margin="4dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/cirsquare_inputpad"
+                        android:gravity="center"
+                        android:textColor="@color/colorWhiteBackground"
+                        />
+
+                    <Spinner
+                        android:id="@+id/spinner_select_gamegendeToSearch"
+                        android:layout_width="120dp"
+                        android:layout_height="40dp"
+                        android:layout_margin="4dp"
+                        android:layout_weight="1"
+                        android:entries="@array/GameGenders"
+                        android:gravity="center" />
+                </TableRow>
+            </TableLayout>
+
+            <Button
+                android:id="@+id/button_searchWhithNationGame"
+                android:layout_width="60dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/textView_SearchResult1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/cirsquare_redpad_button"
+                android:text="@string/Search"
+                android:textColor="@color/colorWhiteBackground"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView_SearchResult1"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_below="@id/tableLayout_searchInputArea1"
+                android:layout_marginEnd="25dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorGrayBackground"
+                android:textColor="@color/colorTextBlack"
+                android:textSize="20sp"
+                android:padding="20dp"
+
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout_searchArea2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/cirsquare_redpad"
+
+            >
+
+            <Button
+                android:id="@+id/button_searchWhithGame"
+                android:layout_width="60dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/cirsquare_redpad_button"
+                android:text="@string/Search"
+                android:textColor="@color/colorWhiteBackground"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView_GameAloneToSearch_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_toEndOf="@id/button_searchWhithGame"
+                android:text="@string/GameName"
+                android:textColor="@color/colorThemeRed"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/editText_GameAloneToSearch"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:gravity="center"
+                android:textColor="@color/colorWhiteBackground"
+                android:background="@drawable/cirsquare_inputpad"
+                android:layout_alignBaseline="@id/textView_GameAloneToSearch_title"
+                android:layout_toEndOf="@id/textView_GameAloneToSearch_title" />
+
+            <TextView
+                android:id="@+id/textView_gameAlongGendeToSearch_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@id/textView_GameAloneToSearch_title"
+                android:layout_below="@id/textView_GameAloneToSearch_title"
+                android:layout_marginTop="20dp"
+                android:text="@string/GameGender"
+                android:textColor="@color/colorThemeRed"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/spinner_select_gameAlongGendeToSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@id/editText_GameAloneToSearch"
+                android:layout_alignTop="@id/textView_gameAlongGendeToSearch_title"
+                android:entries="@array/GameGenders"
+                android:gravity="center"
+
+                />
+
+
+            <TextView
+                android:id="@+id/textView_SearchResult2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/textView_gameAlongGendeToSearch_title"
+                android:layout_marginBottom="15dp"
+                android:layout_marginEnd="25dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="15dp"
+                android:padding="20dp"
+                android:textSize="20sp"
+                android:textColor="@color/colorTextBlack"
+                android:background="@color/colorGrayBackground" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
 
 </FrameLayout>

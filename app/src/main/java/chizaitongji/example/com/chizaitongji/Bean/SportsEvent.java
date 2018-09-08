@@ -1,14 +1,27 @@
 package chizaitongji.example.com.chizaitongji.Bean;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class SportsEvent {
     public enum SportsGender{MALE,FAMALE}
     public enum RankValid{THREE_VALID,FIVE_VALID}
+    public static final int SCORE1IN5=7;
+    public static final int SCORE2IN5=5;
+    public static final int SCORE3IN5=3;
+    public static final int SCORE4IN5=2;
+    public static final int SCORE5IN5=1;
+    public static final int SCORE1IN3=5;
+    public static final int SCORE2IN3=3;
+    public static final int SCORE3IN3=2;
+
+
+
     private String GameName;
     private SportsGender sportsGender;
     private RankValid rankValid;
-    private List<Nation> winners;
+    private Map<Integer,Nation> winners=new HashMap<Integer, Nation>();
     private boolean hasOutcome;
 
     public String getGameName() {
@@ -35,11 +48,11 @@ public class SportsEvent {
         this.rankValid = rankValid;
     }
 
-    public List<Nation> getWinners() {
+    public Map<Integer,Nation>  getWinners() {
         return winners;
     }
 
-    public void setWinners(List<Nation> winners) {
+    public void setWinners(Map<Integer,Nation>  winners) {
         this.winners = winners;
     }
 

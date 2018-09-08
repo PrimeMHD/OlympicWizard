@@ -12,7 +12,7 @@
         android:layout_gravity="center_horizontal"
         android:textSize="32sp"
         android:layout_marginTop="140dp"
-        android:text="吃在同济 v1.0.0" />
+        android:text="奥运精灵 v1.0.0" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -21,7 +21,7 @@
         android:layout_gravity="center_horizontal"
         android:textSize="23sp"
         android:layout_marginTop="210dp"
-        android:text="“吃在同济”APP开发团队制作" />
+        android:text="米浩东制作" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -30,5 +30,5 @@
         android:layout_gravity="center_horizontal"
         android:textSize="23sp"
         android:layout_marginTop="250dp"
-        android:text="Contact Us\nGithub: SuperAmi3401\nEmail: primemhd@outlook.com" />
+        android:text="Contact Me\nGithub: SuperAmi3401\nEmail: primemhd@outlook.com" />
 </FrameLayout>

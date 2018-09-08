@@ -1,5 +1,7 @@
 package chizaitongji.example.com.chizaitongji.Activity;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentManager;
@@ -16,17 +18,14 @@ import com.ashokvarma.bottomnavigation.BottomNavigationBar;
 import com.ashokvarma.bottomnavigation.BottomNavigationItem;
 
 import chizaitongji.example.com.chizaitongji.Bean.OlympicGame;
-import chizaitongji.example.com.chizaitongji.Bean.SportsEvent;
 import chizaitongji.example.com.chizaitongji.Fragment.BaseMainFragment;
 import chizaitongji.example.com.chizaitongji.Fragment.Fragment_FirstGroup.Fragment_RootFirst_Parent;
-import chizaitongji.example.com.chizaitongji.Fragment.Fragment_FirstGroup.Fragment_RootFirst_SonFourth;
 import chizaitongji.example.com.chizaitongji.Fragment.Fragment_SecondGroup.Fragment_RootSecond_Parent;
 import chizaitongji.example.com.chizaitongji.Fragment.Fragment_ThirdGroup.Fragment_RootThird;
 import chizaitongji.example.com.chizaitongji.Fragment.Fragment_FirstGroup.Fragment_RootFirst;
 import chizaitongji.example.com.chizaitongji.Fragment.Fragment_SecondGroup.Fragment_RootSecond;
 import chizaitongji.example.com.chizaitongji.Fragment.InfoFragment;
 import chizaitongji.example.com.chizaitongji.R;
-import me.yokeyword.eventbusactivityscope.EventBusActivityScope;
 import me.yokeyword.fragmentation.SupportActivity;
 import me.yokeyword.fragmentation.SupportFragment;
 import me.yokeyword.fragmentation.SupportHelper;
@@ -68,8 +67,8 @@ public class MainActivity extends SupportActivity
         SupportFragment first_root_Fragment = findFragment(Fragment_RootFirst.class);
         if (first_root_Fragment == null) {
             mFragments[FIRST] = Fragment_RootFirst.newInstance();
-            mFragments[SECOND] = Fragment_RootSecond.newInstance();
-            mFragments[THIRD] = Fragment_RootThird.newInstance();
+            mFragments[SECOND] = Fragment_RootThird.newInstance();
+            mFragments[THIRD] = Fragment_RootSecond.newInstance();
             mFragments[FOURTH] = InfoFragment.newInstance();
             loadMultipleRootFragment(R.id.layFrame, FIRST,
                     mFragments[FIRST],
@@ -140,11 +139,26 @@ public class MainActivity extends SupportActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_camera) {
-            // Handle the camera action
+//            WebVeiwFragment webVeiwFragment = WebVeiwFragment.newInstance(getResources().getString(R.string.OlympicNewsURL));
+//            start(webVeiwFragment);
+//            toolbar.setTitle("奥运现场");
+            Uri uri = Uri.parse(getResources().getString(R.string.OlympicNewsURL));
+            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+            startActivity(intent);
         } else if (id == R.id.nav_gallery) {
-
+//            WebVeiwFragment webVeiwFragment = WebVeiwFragment.newInstance(getResources().getString(R.string.OlympicPicturesURL));
+//            start(webVeiwFragment);
+//            toolbar.setTitle("奥运图集");
+            Uri uri = Uri.parse(getResources().getString(R.string.OlympicPicturesURL));
+            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+            startActivity(intent);
         } else if (id == R.id.nav_slideshow) {
-
+//            WebVeiwFragment webVeiwFragment = WebVeiwFragment.newInstance(getResources().getString(R.string.OlympicVideosURL));
+//            start(webVeiwFragment);
+//            toolbar.setTitle("奥运视频");
+            Uri uri = Uri.parse(getResources().getString(R.string.OlympicVideosURL));
+            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+            startActivity(intent);
         } else if (id == R.id.nav_manage) {
 
         } else if (id == R.id.nav_share) {
@@ -187,9 +201,9 @@ public class MainActivity extends SupportActivity
         bottomNavigationBar.clearAll();
         bottomNavigationBar.setMode(BottomNavigationBar.MODE_FIXED);
         bottomNavigationBar.setBackgroundStyle(BottomNavigationBar.BACKGROUND_STYLE_STATIC);
-        bottomNavigationBar.addItem(new BottomNavigationItem(R.drawable.ic_dashboard_black_24dp, "美食").setActiveColorResource(R.color.colorPrimary))//.setBadgeItem(badgeItem))
-                .addItem(new BottomNavigationItem(R.drawable.ic_notifications_black_24dp, "资讯").setActiveColorResource(R.color.colorPrimary))
-                .addItem(new BottomNavigationItem(R.drawable.ic_home_black_24dp, "广场").setActiveColorResource(R.color.colorPrimary))
+        bottomNavigationBar.addItem(new BottomNavigationItem(R.drawable.ic_home_black_24dp, "赛程").setActiveColorResource(R.color.colorPrimary))//.setBadgeItem(badgeItem))
+                .addItem(new BottomNavigationItem(R.drawable.ic_dashboard_black_24dp, "成绩").setActiveColorResource(R.color.colorPrimary))
+                .addItem(new BottomNavigationItem(R.drawable.ic_notifications_black_24dp, "统计").setActiveColorResource(R.color.colorPrimary))
                 .setFirstSelectedPosition(0)
                 .initialise();
 
@@ -248,6 +262,7 @@ public class MainActivity extends SupportActivity
     @Override
     public void onBackPressedSupport() {
         Log.d(TAG, "在这儿按下了back");
+
         if (getSupportFragmentManager().getBackStackEntryCount() > 1) {
             pop();
         } else {
@@ -258,18 +273,4 @@ public class MainActivity extends SupportActivity
 
 
 
-//    @Override
-//    protected void onResume() {
-//        super.onResume();
-//
-//        first_root_Fragment.getmCb().startTurning(2000);      //设置开始轮播以及轮播时间
-//    }
-//
-//    @Override
-//    protected void onPause() {
-//        if(first_root_Fragment.getmCb()!=null){
-//            first_root_Fragment.getmCb().stopTurning();   //停止轮播
-//        }
-//        super.onPause();
-//    }
 }

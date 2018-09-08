@@ -15,37 +15,39 @@ public class OlympicGame {
     }
 
     public OlympicGame() {
-        games=new ArrayList<SportsEvent>();
-        nations=new ArrayList<Nation>();
+        games = new ArrayList<SportsEvent>();
+        nations = new ArrayList<Nation>();
     }
 
-    public void addSportsEvent(SportsEvent sportsEvent){
+    public void addSportsEvent(SportsEvent sportsEvent) {
         games.add(sportsEvent);
     }
 
-    public  void removeSportsEvent(String SportsEventName){
+    public void removeSportsEvent(String SportsEventName) {
 
     }
-    public void addNation(Nation nation){
+
+    public void addNation(Nation nation) {
         nations.add(nation);
     }
 
-    public boolean SportsEventExists(SportsEvent sportsEvent){
-        for (SportsEvent sportsEvent1:games){
-            if(sportsEvent1.getSportsGender()==sportsEvent.getSportsGender()
+    public boolean SportsEventExists(SportsEvent sportsEvent) {
+        for (SportsEvent sportsEvent1 : games) {
+            if (sportsEvent1.getSportsGender() == sportsEvent.getSportsGender()
                     && sportsEvent1.getGameName().equals(sportsEvent.getGameName())
                     )
                 return true;
         }
         return false;
     }
-    public boolean NationExists(Nation nation){
-       for (Nation nation1:nations){
-           if (nation1.getNationName().equals(nation.getNationName())){
-               return true;
-           }
-       }
-       return false;
+
+    public boolean NationExists(Nation nation) {
+        for (Nation nation1 : nations) {
+            if (nation1.getNationName().equals(nation.getNationName())) {
+                return true;
+            }
+        }
+        return false;
     }
 
     public List<SportsEvent> getGames() {
@@ -59,6 +61,24 @@ public class OlympicGame {
     public List<Nation> getNations() {
         return nations;
     }
+
+    public Nation getNationByName(String Name) {
+        for (Nation nation : nations){
+            if (nation.getNationName().equals(Name)){
+                return nation;
+            }
+        }
+        return null;
+
+    }
+    public SportsEvent getSportsEventByNameAndGender(String name,SportsEvent.SportsGender gender){
+        for (SportsEvent sportsEvent:games){
+            if (sportsEvent.getSportsGender()==gender&&sportsEvent.getGameName().equals(name))
+                return sportsEvent;
+        }
+        return null;
+    }
+
 
     public void setNations(List<Nation> nations) {
         this.nations = nations;

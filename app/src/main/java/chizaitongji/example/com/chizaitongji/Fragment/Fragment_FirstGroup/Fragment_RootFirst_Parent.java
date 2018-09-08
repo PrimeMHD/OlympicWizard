@@ -2,53 +2,28 @@ package chizaitongji.example.com.chizaitongji.Fragment.Fragment_FirstGroup;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.transition.Fade;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.TextView;
 import android.widget.Toast;
-import android.widget.ViewFlipper;
-
-import com.bigkoo.convenientbanner.ConvenientBanner;
-import com.bigkoo.convenientbanner.holder.CBViewHolderCreator;
-import com.bigkoo.convenientbanner.listener.OnItemClickListener;
-import com.youth.banner.Banner;
-import com.youth.banner.BannerConfig;
-import com.youth.banner.Transformer;
-import com.youth.banner.listener.OnBannerListener;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 import chizaitongji.example.com.chizaitongji.Activity.AddGameActivity;
 import chizaitongji.example.com.chizaitongji.Activity.AddNationActivity;
 import chizaitongji.example.com.chizaitongji.Activity.MainActivity;
-import chizaitongji.example.com.chizaitongji.Adapter.BannerImageLoader;
 import chizaitongji.example.com.chizaitongji.Adapter.NationNameAdapter;
 import chizaitongji.example.com.chizaitongji.Adapter.SportsEventSettingThumbnailAdapter;
 import chizaitongji.example.com.chizaitongji.Bean.Nation;
 import chizaitongji.example.com.chizaitongji.Bean.NationThumb;
-import chizaitongji.example.com.chizaitongji.Bean.Notification;
 import chizaitongji.example.com.chizaitongji.Bean.SportsEvent;
 import chizaitongji.example.com.chizaitongji.Bean.SportsEventSettingThumbnail;
 import chizaitongji.example.com.chizaitongji.Fragment.BaseMainFragment;
-import chizaitongji.example.com.chizaitongji.Fragment.WebVeiwFragment;
 import chizaitongji.example.com.chizaitongji.R;
-import chizaitongji.example.com.chizaitongji.Utils.JsonUtil;
 import chizaitongji.example.com.chizaitongji.Utils.NationCodeGenerator;
-import chizaitongji.example.com.chizaitongji.Widgets.ImageViewHolder;
-import me.yokeyword.fragmentation.SupportFragment;
 
 /**
  * Created by Mi HD on 2018/2/7.
@@ -81,7 +56,7 @@ public class Fragment_RootFirst_Parent extends BaseMainFragment {
     public void onSupportVisible() {
         super.onSupportVisible();
         mainActivity = (MainActivity) mContext;
-        mainActivity.getToolbar().setTitle("奥运会传奇");
+        mainActivity.getToolbar().setTitle("奥运赛程设定");
     }
 
     @Nullable
@@ -111,6 +86,7 @@ public class Fragment_RootFirst_Parent extends BaseMainFragment {
         recyclerView1.setAdapter(adapter);
 
         nationNameAdapter=new NationNameAdapter();
+        nationNameAdapter.setMainActivity((MainActivity)mContext);
         recyclerView_NationNames.setAdapter(nationNameAdapter);
 
         return v;

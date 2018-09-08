@@ -4,6 +4,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -11,42 +16,99 @@
         android:layout_margin="10dp"
         android:background="@drawable/cirsquare_redpad">
 
+        <TextView
+            android:text="@string/InGame"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/colorThemeRed"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            />
+
         <android.support.v7.widget.RecyclerView
             android:id="@+id/recyclerview_GameSettingThumbnails"
+            android:layout_marginTop="24dp"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:layout_marginBottom="45dp"
+            />
 
         <Button
+            android:background="@drawable/round_button_red"
             android:id="@+id/button_addGame"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:text="+" />
+            android:text="+"
+            android:textStyle="bold"
+            android:textSize="30sp"
+            android:gravity="center"
+            android:textColor="@color/colorWhiteBackground"
+            android:layout_marginBottom="3dp"
+            />
 
     </RelativeLayout>
 
     <RelativeLayout
-        android:layout_gravity="bottom"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:layout_margin="10dp"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
         android:background="@drawable/cirsquare_redpad">
+        <TextView
+            android:id="@+id/textView_inGameNation_title"
+            android:text="@string/InGameNation"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/colorThemeRed"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            />
+
+        <TextView
+            android:id="@+id/textView_inGameNation_title2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorThemeRed"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            android:text="国家代码          国名"
+            android:layout_below="@id/textView_inGameNation_title"
+            />
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/recyclerview_NationNameThumbnails"
-            android:layout_width="150dp"
-            android:layout_height="match_parent" />
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/textView_inGameNation_title2"
+            android:layout_toStartOf="@id/button_addNationName"
+           android:layout_marginEnd="10dp"
+            android:layout_marginTop="5dp"
+            />
 
         <Button
             android:id="@+id/button_addNationName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="添加国家"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:text="+"
+            android:textStyle="bold"
+            android:textSize="30sp"
+            android:textColor="@color/colorWhiteBackground"
+            android:gravity="center"
+            android:background="@drawable/round_button_red"
             android:layout_alignParentEnd="true"
+            android:layout_marginEnd="20dp"
             android:layout_centerVertical="true"
+
             />
     </RelativeLayout>
+
+</LinearLayout>
+
 
 
 </FrameLayout>

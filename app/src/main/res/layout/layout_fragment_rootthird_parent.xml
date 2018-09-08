@@ -6,10 +6,32 @@
     tools:context="chizaitongji.example.com.chizaitongji.Fragment.Fragment_ThirdGroup.Fragment_RootThird">
 
     <!-- TODO: Update blank fragment layout -->
-    <android.support.v7.widget.RecyclerView
-        android:background="@drawable/cirsquare_redpad"
-        android:id="@+id/recyclerview_Competitions"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="20dp"/>
+        android:layout_margin="10dp"
+        android:background="@drawable/cirsquare_redpad"
+        >
+        <TextView
+            android:id="@+id/textView_RankBoard_title"
+            android:text="比赛成绩"
+            android:textColor="@color/colorThemeRed"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+        <android.support.v7.widget.RecyclerView
+            android:layout_below="@id/textView_RankBoard_title"
+            android:layout_marginTop="10dp"
+            android:id="@+id/recyclerview_Competitions"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="1dp"/>
+
+
+    </RelativeLayout>
+
+
 </FrameLayout>

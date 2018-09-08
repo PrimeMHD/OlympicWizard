@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/cirsquare_rankpad"
+    android:layout_margin="3dp"
+    >
+
+    <TextView
+        android:id="@+id/textView_RankNationCode"
+        android:layout_width="25dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="30dp"
+        android:textSize="18sp"
+        android:textColor="@color/colorWhiteBackground"
+        android:text="@string/NationCode" />
+
+    <TextView
+        android:id="@+id/textView_RankNationName"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/textView_RankNationCode"
+        android:layout_marginStart="30dp"
+        android:layout_toEndOf="@id/textView_RankNationCode"
+        android:textSize="18sp"
+        android:textColor="@color/colorWhiteBackground"
+        android:text="@string/NationName" />
+
+    <TextView
+        android:id="@+id/textView_RankTotalScore"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/textView_RankNationCode"
+        android:layout_marginStart="25dp"
+        android:layout_toEndOf="@id/textView_RankNationName"
+        android:textSize="18sp"
+        android:textColor="@color/colorWhiteBackground"
+        />
+
+
+    <TextView
+        android:id="@+id/textView_RankMaleScore"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/textView_RankNationCode"
+        android:layout_marginStart="25dp"
+        android:layout_toEndOf="@id/textView_RankTotalScore"
+        android:textSize="18sp"
+        android:textColor="@color/colorWhiteBackground"
+        />
+
+    <TextView
+        android:id="@+id/textView_RankFemaleScore"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/textView_RankNationCode"
+        android:layout_marginStart="25dp"
+        android:layout_toEndOf="@id/textView_RankMaleScore"
+        android:textSize="18sp"
+        android:textColor="@color/colorWhiteBackground"
+        />
+
+
+</RelativeLayout>

@@ -1,27 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:background="@drawable/cirsquare_redpad"
+    android:background="@drawable/cirsquare_scoresetpad"
     android:layout_width="match_parent"
     android:layout_height="70dp"
-    android:layout_margin="10dp">
+    android:layout_margin="5dp">
+
+    <ImageView
+        android:id="@+id/gamePic"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="20dp"
+        android:src="@drawable/fivering" />
     <TextView
         android:id="@+id/textView_compName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/GameName"
-        android:layout_alignParentStart="true"
+        android:layout_toEndOf="@id/gamePic"
         android:layout_centerVertical="true"
-        android:layout_marginStart="10dp"
+        android:layout_marginStart="15dp"
+        android:textSize="23sp"
+        android:textColor="@color/colorWhiteBackground"
         />
     <TextView
         android:id="@+id/textView_compState"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/cirsquare"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:background="@drawable/cirsquare_status_nok"
         android:text="@string/compState"
+        android:textColor="@color/colorWhiteBackground"
         android:layout_centerVertical="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="20dp"
+        android:gravity="center"
+        android:layout_marginEnd="12dp"
         />
 
 

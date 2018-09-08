@@ -2,33 +2,44 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="150dp">
+    android:layout_height="100dp"
+    android:background="@color/contentRed"
+    android:layout_margin="10dp"
+    android:padding="6dp"
+    >
 
 
     <ImageView
         android:id="@+id/gamePic"
-        android:src="@mipmap/tj_icon"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:src="@drawable/fivering"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
+        android:layout_marginStart="15dp"
         />
     <TextView
         android:id="@+id/textView_GameName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@id/gamePic"
-        android:layout_toEndOf="@id/gamePic"
+        android:layout_centerHorizontal="true"
         android:text="@string/GameName"
+        android:textSize="23sp"
+        android:textColor="@color/colorWhiteBackground"
+        android:textStyle="bold"
         />
     <TextView
         android:id="@+id/textView_GameGender"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/gamePic"
         android:layout_alignParentStart="true"
-        android:layout_marginStart="10dp"
+        android:layout_marginStart="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
         android:text="@string/GameGender"
+        android:textSize="18sp"
+        android:textColor="@color/colorWhiteBackground"
         />
     <TextView
         android:id="@+id/textView_RankValid"
@@ -38,25 +49,30 @@
         android:layout_toEndOf="@id/textView_GameGender"
         android:layout_alignBaseline="@id/textView_GameGender"
         android:layout_marginStart="20dp"
+        android:textSize="18sp"
+        android:textColor="@color/colorWhiteBackground"
         />
     <Button
         android:id="@+id/button_modify"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="35dp"
         android:text="@string/Modify"
+        android:textStyle="bold"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="10dp"
+        android:layout_marginEnd="8dp"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="10dp"
+        android:background="@drawable/cirsquare_button"
         />
     <Button
         android:id="@+id/button_delete"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="35dp"
         android:text="@string/Delete"
+        android:textStyle="bold"
         android:layout_below="@id/button_modify"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="8dp"
         android:layout_alignStart="@id/button_modify"
+        android:background="@drawable/cirsquare_button"
         />
 
 

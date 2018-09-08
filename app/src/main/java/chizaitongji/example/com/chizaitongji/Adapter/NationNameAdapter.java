@@ -1,6 +1,7 @@
 package chizaitongji.example.com.chizaitongji.Adapter;
 
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +12,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
+import chizaitongji.example.com.chizaitongji.Activity.MainActivity;
 import chizaitongji.example.com.chizaitongji.Bean.NationThumb;
 
 import chizaitongji.example.com.chizaitongji.Listener.OnItemClickListener;
@@ -20,7 +22,7 @@ public class NationNameAdapter extends RecyclerView.Adapter<NationNameAdapter.My
 
     private List<NationThumb> nationThumbList;
     private OnItemClickListener mClickListener;
-
+private MainActivity mainActivity;
 
 
     public NationNameAdapter(List<NationThumb> nationThumbList) {
@@ -66,6 +68,7 @@ public class NationNameAdapter extends RecyclerView.Adapter<NationNameAdapter.My
                 int removePos=holder.getAdapterPosition();
                 nationThumbList.remove(removePos);
                 notifyItemRemoved(removePos);
+                mainActivity.getOlympicGame().getNations().remove(removePos);
             }
         });
 
@@ -113,7 +116,10 @@ public class NationNameAdapter extends RecyclerView.Adapter<NationNameAdapter.My
         this.nationThumbList.add(nationThumb);
         notifyDataSetChanged();
     }
+    public void setMainActivity(MainActivity mainActivity) {
 
+        this.mainActivity = mainActivity;
+    }
 
 
 }

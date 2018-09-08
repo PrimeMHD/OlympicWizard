@@ -8,9 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import chizaitongji.example.com.chizaitongji.Activity.MainActivity;
-import chizaitongji.example.com.chizaitongji.Fragment.Fragment_FirstGroup.Fragment_RootFirst_SonThird;
 import chizaitongji.example.com.chizaitongji.R;
-import me.yokeyword.fragmentation.SupportFragment;
 
 public class InfoFragment extends BaseMainFragment {
 

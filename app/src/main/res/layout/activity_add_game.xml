@@ -1,98 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="350dp"
+    android:layout_height="275dp"
+    tools:context=".Activity.AddGameActivity">
+
+    <TextView
+        android:id="@+id/textView_tag_gamesetting_title"
         android:layout_width="wrap_content"
-        android:layout_height="200dp"
-        xmlns:tools="http://schemas.android.com/tools"
-        tools:context=".Activity.AddGameActivity">
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="@string/AddNewGame"
+        android:textColor="@color/TextDeepGrey"
+        android:textSize="20sp" />
 
-        <TextView
-            android:id="@+id/textView_tag_gamesetting_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="20dp"
-            android:text="@string/AddNewGame"
-            />
-        <TextView
-            android:id="@+id/textView_tag_gamename"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/GameName"
-            android:layout_below="@id/textView_tag_gamesetting_title"
-            android:layout_alignParentStart="true"
-            android:layout_marginStart="20dp"
-            />
-        <TextView
-            android:id="@+id/textView_tag_gamegender"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/GameGender"
-            android:layout_below="@id/textView_tag_gamename"
-            android:layout_alignStart="@id/textView_tag_gamename"
-            android:layout_marginTop="5dp"
-            />
-        <TextView
-            android:id="@+id/textView_tag_rankvalid"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/RankValid"
-            android:layout_below="@id/textView_tag_gamegender"
-            android:layout_alignStart="@id/textView_tag_gamename"
-            android:layout_marginTop="5dp"
-            />
-        <EditText
-            android:id="@+id/edit_gamename"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:layout_toEndOf="@id/textView_tag_gamename"
-            android:layout_alignBaseline="@id/textView_tag_gamename"
-            android:layout_marginStart="5dp"
-            />
-        <Spinner
-            android:id="@+id/spinner_select_gamegender"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:entries="@array/GameGenders"
-            android:layout_alignStart="@id/edit_gamename"
-            android:layout_alignBaseline="@id/textView_tag_gamegender"
-            />
-        <Spinner
-            android:id="@+id/spinner_select_rankvalid"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:entries="@array/RankValid"
-            android:layout_alignStart="@id/edit_gamename"
-            android:layout_alignBaseline="@id/textView_tag_rankvalid"
-            />
+    <TextView
+        android:id="@+id/textView_tag_gamename"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/textView_tag_gamesetting_title"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/GameName"
+        android:textColor="@color/TextDeepGrey"
+        android:textSize="14sp" />
 
+    <TextView
+        android:id="@+id/textView_tag_gamegender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/textView_tag_gamename"
+        android:layout_below="@id/textView_tag_gamename"
+        android:layout_marginTop="@dimen/settingItemMargin"
+        android:text="@string/GameGender"
+        android:textColor="@color/TextDeepGrey"
+        android:textSize="14sp" />
 
+    <TextView
+        android:id="@+id/textView_tag_rankvalid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/textView_tag_gamename"
+        android:layout_below="@id/textView_tag_gamegender"
+        android:layout_marginTop="@dimen/settingItemMargin"
+        android:text="@string/RankValid"
+        android:textColor="@color/TextDeepGrey"
+        android:textSize="14sp" />
 
+    <EditText
+        android:id="@+id/edit_gamename"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/textView_tag_gamename"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@id/textView_tag_gamename"
+        />
 
+    <Spinner
+        android:id="@+id/spinner_select_gamegender"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/textView_tag_gamegender"
+        android:layout_alignStart="@id/edit_gamename"
+        android:layout_marginStart="10dp"
+        android:entries="@array/GameGenders" />
 
-<Button
-    android:id="@+id/button_cancel_addgame"
-    android:layout_width="70dp"
-    android:layout_height="wrap_content"
-    android:text="@string/cancel"
-    android:layout_alignParentBottom="true"
-    android:layout_marginBottom="5dp"
-  android:layout_marginStart="100dp"
-
-    />
+    <Spinner
+        android:id="@+id/spinner_select_rankvalid"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/textView_tag_rankvalid"
+        android:layout_alignStart="@id/edit_gamename"
+        android:layout_marginStart="10dp"
+        android:entries="@array/RankValid" />
 
 
+    <Button
+        android:id="@+id/button_cancel_addgame"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="17dp"
+        android:layout_marginStart="100dp"
+        android:background="@drawable/cirsquare_redpad_button"
+        android:text="@string/cancel"
+        android:textColor="#FFFFFF"
+android:textStyle="bold"
+        />
 
 
+    <Button
+        android:id="@+id/button_confirm_addgame"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="17dp"
+        android:layout_marginStart="200dp"
+        android:text="@string/confirm"
+        android:background="@drawable/cirsquare_redpad_button"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
 
-        <Button
-            android:id="@+id/button_confirm_addgame"
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
-            android:text="@string/confirm"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="5dp"
-            android:layout_marginStart="200dp"
+        />
 
-            />
-
-    </RelativeLayout>
+</RelativeLayout>

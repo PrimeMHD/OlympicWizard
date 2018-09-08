@@ -6,5 +6,7 @@
     <dimen name="nav_header_height">220dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="bottombar_height">56dp</dimen>
-    <dimen name="settingItemMargin">14dp</dimen>
+    <dimen name="settingItemMargin">25dp</dimen>
+    <dimen name="RankTypeSelectorHeight">40dp</dimen>
+    <dimen name="SearchResultHeight">100dp</dimen>
 </resources>

@@ -2,9 +2,12 @@
 <resources>
     <color name="colorPrimary">#d33a31</color>
     <color name="colorPrimaryDark">#B3261E</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorAccent">#ff4753</color>
     <color name="colorGrayBackground">#dedede</color>
     <color name="colorWhiteBackground">#FFFFFF</color>
     <color name="colorTextBlack">#000000</color>
     <color name="colorThemeRed">#d33a31</color>
+    <color name="contentRed">#e0ff3333</color>
+    <color name="TextDeepGrey">#403d3d</color>
+    <color name="widgetOrange">#f19854</color>
 </resources>
